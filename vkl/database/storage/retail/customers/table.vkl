@@ -1,0 +1,33 @@
+import db.storage.retail.customers
+
+db.storage.retail {
+    table customers {
+        identifier: "customers"
+        
+        
+        column birthdate {
+            identifier: "birthdate"
+            primitive_type: "DATE"
+        }
+        
+        column email {
+            identifier: "email"
+            primitive_type: "STRING"
+        }
+        
+        column gender {
+            identifier: "gender"
+            primitive_type: "STRING"
+        }
+        
+        column id {
+            identifier: "id"
+            primitive_type: "STRING"
+        }
+        
+        column name {
+            identifier: "name"
+            primitive_type: "STRING"
+        }
+    }
+}

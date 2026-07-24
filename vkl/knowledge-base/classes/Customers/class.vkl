@@ -1,0 +1,56 @@
+import db.storage.retail.customers
+
+kb {
+    class Customers {
+        name.en: "Customers"
+        
+        from_table: customers
+        sql: "${customers.id}"
+        sync_policy: "ignore"
+        name_sql.en: "${customers.name}"
+        
+        
+        date Birthdate {
+            name.en: "Birthdate"
+            
+            sql: "${customers.birthdate}"
+            
+            datetime_format: DayFormat
+            extends: onto.Birthdate
+        }
+        
+        string Email {
+            name.en: "Email"
+            
+            sql: "${customers.email}"
+            
+            extends: onto.EmailAddress
+        }
+        
+        class Gender {
+            name.en: "Gender"
+            
+            sql: "${customers.gender}"
+            
+            extends: onto.Gender
+            type_of: Customers
+        }
+        
+        string Id {
+            name.en: "Id"
+            tag: KB_One2One
+            
+            sql: "${customers.id}"
+            
+            extends: onto.ID
+        }
+        
+        string Name {
+            name.en: "Name"
+            
+            sql: "${customers.name}"
+            
+            extends: onto.Name
+        }
+    }
+}

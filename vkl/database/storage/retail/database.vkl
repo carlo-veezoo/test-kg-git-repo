@@ -1,0 +1,5 @@
+db.storage {
+    database retail {
+        identifier: "retail"
+    }
+}
