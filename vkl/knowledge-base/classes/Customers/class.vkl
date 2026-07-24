@@ -2,7 +2,7 @@ import db.storage.retail.customers
 
 kb {
     class Customers {
-        name.en: "Customers"
+        name.en: "Customers123"
         
         from_table: customers
         sql: "${customers.id}"
